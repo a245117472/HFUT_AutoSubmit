@@ -3,7 +3,8 @@
 
 # 使用说明
 
-1. **Fork 本项目**
+1. **Fork 本项目**  
+   ![图示](https://cdn.jsdelivr.net/gh/qdddz/HFUT_AutoSubmit/docs/imgs/fork.jpg)   
 2. **获取sckey**
    1. 前往 [sc.ftqq.com](http://sc.ftqq.com/3.version) 点击登入，创建账号（建议使用 GitHub 登录）。
    2. 点击[发送消息](http://sc.ftqq.com/?c=code) ，生成一个 Key。之后会将其增加到 Github Secrets 中，变量名为 `sckey`
