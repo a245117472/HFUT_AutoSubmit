@@ -1,3 +1,4 @@
+from logging import error
 import requests
 import time
 from selenium import webdriver
@@ -26,6 +27,7 @@ def main():
     
     driver.get("http://stu.hfut.edu.cn/")
 
+    time.sleep(10)
     for line in cookieStr.split(';'):
         cookies = {}
         name, value = line.strip().split('=', 1)
@@ -34,13 +36,22 @@ def main():
         driver.add_cookie(cookie_dict=cookies)
 
     driver.get("http://stu.hfut.edu.cn/xsfw/sys/swmxsyqxxsjapp/*default/index.do#/add")
+    time.sleep(10)
     driver.refresh()
     time.sleep(10)
 
-    driver.find_element_by_xpath('/html/body/div[1]/div[1]/div[6]/div/button').click()
+
+    for i in range(10):
+        try:
+            driver.find_element_by_xpath('/html/body/div[1]/div[1]/div[6]/div/button').click()
+        except:
+            continue
+        break
     
-    time.sleep(1)
+    
+    time.sleep(10)
     driver.refresh()
+    time.sleep(10)
     if driver.current_url == 'http://stu.hfut.edu.cn/xsfw/sys/swmxsyqxxsjapp/*default/index.do#/success':
         requests.post('https://sc.ftqq.com/SCU129133Te46b3092cda09f8b746d941b4463e6a65fbb92113bfbd.send?text=自动打卡成功')
     else:
