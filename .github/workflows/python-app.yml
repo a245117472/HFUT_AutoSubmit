@@ -34,6 +34,6 @@ jobs:
       env:
         username: ${{ secrets.username }}
         password: ${{ secrets.password }}
-        szkey: ${{ secrets.szkey }}
+        sckey: ${{ secrets.sckey }}
       run: |
         python ./useselenium.py 

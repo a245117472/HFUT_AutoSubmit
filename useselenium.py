@@ -1,4 +1,3 @@
-from logging import error
 import requests
 import time
 from selenium import webdriver
@@ -53,9 +52,9 @@ def main():
     driver.refresh()
     time.sleep(10)
     if driver.current_url == 'http://stu.hfut.edu.cn/xsfw/sys/swmxsyqxxsjapp/*default/index.do#/success':
-        requests.post('https://sc.ftqq.com/SCU129133Te46b3092cda09f8b746d941b4463e6a65fbb92113bfbd.send?text=自动打卡成功')
+        requests.post('https://sc.ftqq.com/'+env_dist['sckey']+'.send?text=自动打卡成功')
     else:
-        requests.post('https://sc.ftqq.com/SCU129133Te46b3092cda09f8b746d941b4463e6a65fbb92113bfbd.send?text=自动打卡失败')
+        requests.post('https://sc.ftqq.com/'+env_dist['sckey']+'.send?text=自动打卡失败')
     
     driver.close()
 
