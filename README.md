@@ -14,7 +14,8 @@
 |-----|-----|
 | username | 学号 |
 | password | 新信息门户密码 |
-| sckey | server酱推送的sckey |
+| sckey | server酱推送的sckey |  
+
    ![图示](https://cdn.jsdelivr.net/gh/qdddz/HFUT_AutoSubmit/docs/imgs/secret.jpg)
 4. 运行结果将会通过微信的server酱通知给您
    ![图示](https://cdn.jsdelivr.net/gh/qdddz/HFUT_AutoSubmit/docs/imgs/result.jpg)
