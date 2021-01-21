@@ -40,6 +40,12 @@ def main():
     driver.find_element_by_xpath('/html/body/div[1]/div[1]/div[6]/div/button').click()
     
     time.sleep(1)
+    driver.refresh()
+    if driver.current_url == 'http://stu.hfut.edu.cn/xsfw/sys/swmxsyqxxsjapp/*default/index.do#/success':
+        requests.post('https://sc.ftqq.com/SCU129133Te46b3092cda09f8b746d941b4463e6a65fbb92113bfbd.send?text=自动打卡成功')
+    else:
+        requests.post('https://sc.ftqq.com/SCU129133Te46b3092cda09f8b746d941b4463e6a65fbb92113bfbd.send?text=自动打卡失败')
+    
     driver.close()
 
 if __name__ == '__main__':
