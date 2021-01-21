@@ -19,7 +19,7 @@ def main():
         'username': env_dist['username'],
         'password': env_dist['password']
     }
-    print(params['username'])
+    
     res = requests.post(
         'http://cas.ge2dan.top/wisedu-unified-login-api-v1.0/api/login', params)
     cookieStr = str(res.json()['cookies'])
@@ -34,9 +34,13 @@ def main():
         driver.add_cookie(cookie_dict=cookies)
 
     driver.get("http://stu.hfut.edu.cn/xsfw/sys/swmxsyqxxsjapp/*default/index.do#/add")
+    driver.refresh()
     time.sleep(10)
+
     driver.find_element_by_xpath('/html/body/div[1]/div[1]/div[6]/div/button').click()
-    driver.quit()
+    
+    time.sleep(1)
+    driver.close()
 
 if __name__ == '__main__':
     main()
