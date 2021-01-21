@@ -7,7 +7,7 @@
 2. **获取sckey**
    1. 前往 [sc.ftqq.com](http://sc.ftqq.com/3.version) 点击登入，创建账号（建议使用 GitHub 登录）。
    2. 点击点[发送消息](http://sc.ftqq.com/?c=code) ，生成一个 Key。之后会将其增加到 Github Secrets 中，变量名为 `sckey`
-   3. [绑定微信账号](http://sc.ftqq.com/?c=wechat&a=bind) ，开启微信推送。  ![图示](docs/imgs/serverpush.png)
+   3. [绑定微信账号](http://sc.ftqq.com/?c=wechat&a=bind) ，开启微信推送。  ![图示](https://sm.ms/delete/WBOoiEvpNk68PSVtlw4QFAcyme)
 3. **点击项目 Settings -> Secrets -> New Secrets 添加以下 3 个 Secrets，其中server酱微信推送的sckey可见上一步**
    
 |Name|Value|
@@ -16,7 +16,7 @@
 | password | 新信息门户密码 |
 | sckey | server酱推送的sckey |
 
-![图示](docs/imgs/1.jpg)
+![图示]([docs/imgs/1.jpg](https://sm.ms/delete/iFUfyXP92pkQnMRwmvhAdlsKrH))
 
 4. 运行结果将会通过微信的server酱通知给您
 
