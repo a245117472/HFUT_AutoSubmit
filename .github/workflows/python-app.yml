@@ -16,9 +16,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - env:
-        username: ${{ secrets.username }}
-        password: ${{ secrets.password }}
     - name: Set up Python 3.7
       uses: actions/setup-python@v2
       with:
@@ -30,6 +27,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install selenium requests
         wget https://chromedriver.storage.googleapis.com/$(google-chrome --version|cut -b 15-26)/chromedriver_linux64.zip&&unzip chromedriver_linux64.zip&&sudo mv chromedriver /usr/local/bin/
-    - name: Run code
+    - name: Run code 
+      env:
+        username: ${{ secrets.username }}
+        password: ${{ secrets.password }}
       run: |
         python ./useselenium.py 
